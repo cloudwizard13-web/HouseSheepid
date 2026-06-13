@@ -300,17 +300,17 @@ function makeSeed() {
         { ic: "truck", text: "Antar ke lokasi" },
       ],
       about: {
-        title: "Tentang Lembah Hijau",
+        title: "Tentang HouseSheep",
         body: "Peternakan domba di Garut yang fokus pada kualitas dan kesehatan ternak. Setiap domba ditimbang, diperiksa dokter hewan, dan punya riwayat perawatan yang tercatat. Harga dihitung adil berdasarkan bobot hidup per kilogram.",
       },
     },
     settings: {
-      brand: "Lembah Hijau",
+      brand: "HouseSheep",
       tagline: "Peternakan Domba Premium",
       waNumber: "6281234567890",
-      siteUrl: "https://lembahhijau.id",
+      siteUrl: "https://HouseSheep.id",
       location: "Garut, Jawa Barat",
-      email: "halo@lembahhijau.id",
+      email: "halo@housesheep.id",
       hours: "Setiap hari, 07.00–17.00",
       accent: "#059669",
     },
@@ -1272,7 +1272,7 @@ function Login({ onLogin, brand, onBack }) {
           Kelola katalog, harga, konten, dan pengaturan etalase.
         </p>
         <Field label="Email">
-          <input defaultValue="admin@lembahhijau.id" />
+          <input defaultValue="admin@housesheep.id" />
         </Field>
         <Field label="Kata sandi">
           <input type="password" placeholder="••••••••" />
