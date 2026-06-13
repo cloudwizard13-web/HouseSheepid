@@ -99,19 +99,20 @@ const ICONS = {
 };
 const DP_PCT = 0.3;
 
-const uid = (p = "k_") => p + Math.random().toString(36).slice(2, 9);
+const uid = (p: string = "k_") => p + Math.random().toString(36).slice(2, 9);
 const now = () => new Date().toISOString();
-const idr = (n) =>
+const idr = (n: number | string) =>
   new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
     maximumFractionDigits: 0,
   }).format(Math.round(Number(n) || 0));
-const idrShort = (n) => {
-  n = Number(n) || 0;
-  return n >= 1e6
-    ? "Rp " + (n / 1e6).toFixed(n % 1e6 === 0 ? 0 : 1).replace(".", ",") + " jt"
-    : idr(n);
+
+const idrShort = (n: number | string) => {
+  const num = Number(n) || 0; // Menggunakan variabel baru 'num' agar TS tidak protes soal reassignment
+  return num >= 1e6
+    ? "Rp " + (num / 1e6).toFixed(num % 1e6 === 0 ? 0 : 1).replace(".", ",") + " jt"
+    : idr(num);
 };
 const fmtDate = (iso) =>
   new Date(iso).toLocaleDateString("id-ID", {
